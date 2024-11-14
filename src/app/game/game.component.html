@@ -1,1 +1,8 @@
-<p>game works!</p>
+<div class="field">
+    <div class="card-stack">
+        @for(item of [0,1,2,3,4]; track item; let i= $index){
+            <img [ngStyle]="{'right.px': i *5}" src="assets/img/cards/card_cover.png" alt="cards">
+        } 
+        <img (click)="takeCard()" [class.pick-card] = "pickCardAnimation" class="top-card" style ="right: 25px" src="assets/img/cards/card_cover.png" alt="cards">
+    </div>
+</div>
